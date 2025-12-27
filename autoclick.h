@@ -13,6 +13,7 @@ public:
     explicit AutoClick(QObject *parent = nullptr);
 
     void startClicking();
+    void performClick();
     void stopClicking();
     void setClickPosition(int x, int y);
     QPoint getClickPosition() const;
@@ -20,8 +21,7 @@ public:
 signals:
     void clicked();
 
-private slots:
-    void performClick();
+
 
 private:
     QPoint clickPosition;
