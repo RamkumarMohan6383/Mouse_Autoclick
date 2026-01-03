@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setWindowFlag(Qt::WindowCloseButtonHint,true);
     setWindowTitle("Mouse Auto Click");
-    ui->pushButton->setDisabled(false);
+    ui->pushButton->setDisabled(true);
     ui->pushButton_2->setDisabled(true);
     ui->pushButton_3->setDisabled(true);
     foreach (const QSerialPortInfo &portInfo, QSerialPortInfo::availablePorts()) {
@@ -84,11 +84,13 @@ void MainWindow::setupSerialPort()
 
     if (!serial.open(QIODevice::ReadOnly)) {
         ui->statusbar->showMessage("Serial open failed!");
+        ui->pushButton->setEnabled(false);
         qDebug() << serial.errorString();
         return;
     }
 
     ui->statusbar->showMessage("Serial connected");
+    ui->pushButton->setEnabled(true);
 
     // 🔐 Prevent duplicate connections
     disconnect(&serial, nullptr, this, nullptr);

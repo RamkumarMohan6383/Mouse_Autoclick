@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(223, 229, 231);</string>
+   <string notr="true">background-color: rgb(233, 242, 248);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="layoutWidget">
@@ -231,6 +231,10 @@ color:black;
       <family>Times New Roman</family>
       <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(30, 123, 204);
+color:white;</string>
     </property>
     <property name="text">
      <string>Connect</string>

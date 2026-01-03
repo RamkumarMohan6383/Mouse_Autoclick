@@ -3,5 +3,6 @@
         <file>pin.png</file>
         <file>play.png</file>
         <file>stop.png</file>
+        <file>cursor.ico</file>
     </qresource>
 </RCC>
